@@ -1,0 +1,71 @@
+
+Express - helps us with routing requests
+
+ssr - server side rendering
+
+Express Basics
+-----------------------
+Express is self-described as a "fast, unopinionated, minimalist web framework for Node.js." It provides a robust set of features for creating and scaling web applications through a flexible framework that includes HTTP utility methods and middleware.
+
+Express Installation
+----------------------------
+1. create new project folder
+2. git init 
+3. create index.js
+4. npm init -y 
+5. npm i nodemon --save-dev (or) npm i -D nodemon //installing nodemon within project
+6. npm i express
+7. const varExp = requires("express")
+8. nodemon index.js
+
+ctrl + shift + p - Developer: Reload window, refreshes vscode
+
+//cannot GET / - by default web client asks for the base route / from the server using an HTTP GET request
+//cannot and method name - connected to server, but may be cannot reach url... route
+
+//right now server doing nothing, its alive but nothing, ...
+/////////////////////////
+//Express routes have the following structure:
+//app.method(path, handler)
+//app is the instance of Express.
+//method is the HTTP request method, in lowercase (GET, POST, DELETE, etc.).
+//path is the URL path on the server.
+//handler is the function executed when the route is matched.
+///////////////////////
+
+
+
+
+///////////////Joshu s assignment//////////////////////
+1. Friendly Robot Server
+Goal: Build a server that pretends to be a friendly robot.
+Task:
+Set up an Express server that listens on port 3000.
+When the root route (/) is visited, respond with “:robot_face: Beep boop! Welcome to the Robot Server!”
+Encourage students to greet the robot at http://localhost:3000/!
+2. Superhero Name Generator
+Goal: Create a route that generates a superhero name based on a user’s real name.
+Task:
+Create a route /hero/:name.
+Use the name parameter in the URL to respond with something like “Hello, {name}, your superhero name is Captain {name}!”
+Example: http://localhost:3000/hero/Tony should respond with “Hello, Tony, your superhero name is Captain Tony!”
+3. Magic 8-Ball
+Goal: Make a simple Magic 8-ball route that predicts the future.
+Task:
+Create a GET route /magic/:question.
+Accept a route parameter question and respond with a random Magic 8-ball answer (e.g., “Yes”, “No”, “Ask again later”).
+Example: http://localhost:3000/magic/Will%20I%20pass%20the%20test? should respond with a random answer like “Yes”.
+4. Random Animal Facts
+Goal: Create a fun route that serves random animal facts.
+Task:
+Create a GET route /animal-fact.
+Store an array of animal facts (e.g., “Cows have best friends”, “Octopuses have three hearts”).
+Respond with a random fact when the user visits the route.
+5. Compliment Generator
+Goal: Make a route that generates random compliments.
+Task:
+Create a GET route /compliment.
+Respond with a random compliment from an array of compliments (e.g., “You’re a coding genius!“, “You light up the room!“).
+Allow a query string parameter name to personalize the compliment.
+Example: http://localhost:3000/compliment?name=Sarah should respond with “Sarah, you’re a coding genius!”
+//////////////////////////////////
